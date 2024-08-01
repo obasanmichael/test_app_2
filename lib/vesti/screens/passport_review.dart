@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:test_app_2/vesti/screens/process_upload.dart';
 import 'package:test_app_2/vesti/widgets/button.dart';
 import 'package:test_app_2/vesti/widgets/outlined_button.dart';
+import 'package:test_app_2/vesti/widgets/upload_success.dart';
 
 class PassportReviewScreen extends StatelessWidget {
   const PassportReviewScreen({super.key});
@@ -10,6 +12,28 @@ class PassportReviewScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget addHeight(double height) => SizedBox(height: height.h);
     Widget addWidth(double width) => SizedBox(width: width.w);
+
+    void openUploadSuccessModal() {
+      showModalBottomSheet<dynamic>(
+        isScrollControlled: true,
+        context: context,
+        builder: (BuildContext bc) {
+          return Wrap(children: <Widget>[
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(25.0),
+                  topRight: Radius.circular(25.0),
+                ),
+              ),
+              child: UploadSucessModal(),
+            )
+          ]);
+        },
+      );
+    }
+
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -50,17 +74,16 @@ class PassportReviewScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12.r),
               ),
             ),
-            Spacer(),
+            addHeight(80),
             MyButton(
                 label: 'Photo is clear and visible',
-                onPressed: () {
-                  // Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //         builder: (context) => ProcessingUploadScreen()));
-                }),
+                onPressed: openUploadSuccessModal),
             addHeight(13),
-            MyOutlinedButton(label: 'Use another photo', onPressed: () {})
+            MyOutlinedButton(
+                label: 'Use another photo',
+                onPressed: () {
+                  Navigator.pop(context);
+                })
           ],
         ),
       ),

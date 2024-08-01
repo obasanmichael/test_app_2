@@ -85,54 +85,56 @@ class _PassportDetailScreenState extends State<PassportDetailScreen> {
               ],
             ),
             addHeight(15),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Expanded(
-                        child: buildCopyableField(
-                          label: 'First Name',
-                          text: 'Mimi-stephanie',
-                          field: 'firstName',
-                          copied: copiedStatus['firstName']!,
-                        ),
-                      ),
-                      addWidth(25),
-                      Expanded(
-                        child: buildCopyableField(
-                          label: 'Last Name',
-                          text: 'Ugeh',
-                          field: 'lastName',
-                          copied: copiedStatus['lastName']!,
-                        ),
-                      ),
-                    ],
-                  ),
-                  addHeight(13),
-                  buildCopyableField(
-                    label: 'Passport Number',
-                    text: 'A123457890',
-                    field: 'passportNumber',
-                    copied: copiedStatus['passportNumber']!,
-                  ),
-                  addHeight(13),
-                  buildCopyableField(
-                    label: 'Expiry Date',
-                    text: '30 December 2030',
-                    field: 'expiryDate',
-                    copied: copiedStatus['expiryDate']!,
-                  ),
-                  Spacer(),
-                  buildActionButton(
-                      'Download Image', Color(0xff67A948), Icons.download),
-                  addHeight(14),
-                  MyOutlinedButton(
-                      label: 'Share Passport Image', onPressed: () {})
-                ],
-              ),
-            ),
+            // Expanded(
+            //   child: Column(
+            //     crossAxisAlignment: CrossAxisAlignment.start,
+            //     children: [
+            //       Row(
+            //         children: [
+            //           Expanded(
+            //             child: buildCopyableField(
+            //               label: 'First Name',
+            //               text: 'Mimi-stephanie',
+            //               field: 'firstName',
+            //               copied: copiedStatus['firstName']!,
+            //             ),
+            //           ),
+            //           addWidth(25),
+            //           Expanded(
+            //             child: buildCopyableField(
+            //               label: 'Last Name',
+            //               text: 'Ugeh',
+            //               field: 'lastName',
+            //               copied: copiedStatus['lastName']!,
+            //             ),
+            //           ),
+            //         ],
+            //       ),
+            //       addHeight(13),
+            //       buildCopyableField(
+            //         label: 'Passport Number',
+            //         text: 'A123457890',
+            //         field: 'passportNumber',
+            //         copied: copiedStatus['passportNumber']!,
+            //       ),
+            //       addHeight(13),
+            //       buildCopyableField(
+            //         label: 'Expiry Date',
+            //         text: '30 December 2030',
+            //         field: 'expiryDate',
+            //         copied: copiedStatus['expiryDate']!,
+            //       ),
+            //       Spacer(),
+            //       buildActionButton(
+            //           'Download Image', Color(0xff67A948), Icons.download),
+            //       addHeight(14),
+            //       MyOutlinedButton(
+            //           label: 'Share Passport Image', onPressed: () {})
+            //     ],
+            //   ),
+            // ),
+
+            
           ],
         ),
       ),

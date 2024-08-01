@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:test_app_2/vesti/providers/passport_provider.dart';
 import 'package:test_app_2/vesti/screens/information_check.dart';
+import 'package:test_app_2/vesti/screens/passport_review.dart';
 import 'package:test_app_2/vesti/widgets/text_tiles.dart';
 
 class PassportUploadScreen extends ConsumerStatefulWidget {
@@ -188,8 +188,8 @@ class _PassportUploadScreenState extends ConsumerState<PassportUploadScreen> {
               ),
             ),
             addHeight(30),
-            passportUploadState.when(
-              data: (_) => SizedBox(
+            
+              SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -200,43 +200,23 @@ class _PassportUploadScreenState extends ConsumerState<PassportUploadScreen> {
                       )),
                       backgroundColor: Color(0xff67A948)),
                   onPressed: () async {
-                    if (_image != null) {
-                      // Replace these details with actual user input or state
-                      const userId = 'a00a51da-0b33-4ad2-af77-b85ee1b95c45';
-                      const firstName = 'Teni';
-                      const lastName = 'Olawande';
-                      const passportNumber = '3839393939';
-                      const dateOfBirth = '10-2-1998';
-                      const expirationDate = '10-2-2000';
-
-                    await ref
-                          .read(passportNotifierProvider.notifier)
-                          .uploadPassportImage(
-                            passportImagePath: _image!.path,
-                          );
+                   
                       Navigator.push(
                           context,
                           MaterialPageRoute(
                               builder: (context) =>
-                                  const InformationCheckScreen()));
-                    }
-                  },
+                                  const PassportReviewScreen()));
+                    },
                   child: Text(
                     'Upload image',
                     style: TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 16.sp,
+                      color: Colors.white
                     ),
                   ),
                 ),
               ),
-              loading: () => Center(
-                child: CircularProgressIndicator(),
-              ),
-              error: (error, stack) => Center(
-                child: Text('Error: $error'),
-              ),
-            ),
           ],
         ),
       ),
