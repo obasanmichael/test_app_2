@@ -16,7 +16,8 @@ class MyOutlinedButton extends StatelessWidget {
       width: double.infinity,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          side: BorderSide(color: Color(0xff3E6F26)),
+            elevation: 0,
+            side: BorderSide(color: Color(0xff3E6F26)),
             padding: EdgeInsets.symmetric(vertical: 17.h),
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(

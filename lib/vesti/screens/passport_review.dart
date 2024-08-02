@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_app_2/vesti/widgets/button.dart';
@@ -5,7 +7,9 @@ import 'package:test_app_2/vesti/widgets/outlined_button.dart';
 import 'package:test_app_2/vesti/widgets/upload_success.dart';
 
 class PassportReviewScreen extends StatelessWidget {
-  const PassportReviewScreen({super.key});
+  const PassportReviewScreen({super.key, required this.imagePath});
+
+  final String imagePath;
 
   @override
   Widget build(BuildContext context) {
@@ -71,6 +75,10 @@ class PassportReviewScreen extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.grey,
                 borderRadius: BorderRadius.circular(12.r),
+                image: DecorationImage(
+                  image: FileImage(File(imagePath)),
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
             addHeight(80),

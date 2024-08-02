@@ -189,7 +189,9 @@ class _PassportUploadScreenState extends ConsumerState<PassportUploadScreen> {
                             context,
                             MaterialPageRoute(
                                 builder: (context) =>
-                                    const PassportReviewScreen()));
+                                     PassportReviewScreen(
+                                      imagePath: _image!.path,
+                                    )));
                       },
                 child: Text(
                   'Upload image',
