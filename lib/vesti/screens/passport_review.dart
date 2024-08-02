@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app_2/vesti/screens/process_upload.dart';
 import 'package:test_app_2/vesti/widgets/button.dart';
 import 'package:test_app_2/vesti/widgets/outlined_button.dart';
 import 'package:test_app_2/vesti/widgets/upload_success.dart';

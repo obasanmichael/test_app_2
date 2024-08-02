@@ -2,7 +2,7 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_app_2/vesti/widgets/outlined_button.dart';
+import 'package:flutter_svg/svg.dart';
 
 class PassportDetailScreen extends StatefulWidget {
   const PassportDetailScreen({super.key});
@@ -84,7 +84,76 @@ class _PassportDetailScreenState extends State<PassportDetailScreen> {
                 ),
               ],
             ),
-            addHeight(15),
+            addHeight(42),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Column(
+                  children: [
+                    GestureDetector(
+                      onTap: (){},
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Color(0xffDFFFD0),
+                          borderRadius: BorderRadius.circular(5.r),
+                        ),
+                        height: 60.h,
+                        width: 60.h,
+                        child: Center(
+                          child: SizedBox(
+                            height: 30.h,
+                            width: 30.h,
+                            child: SvgPicture.asset(
+                              'assets/svg/download.svg',
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    addHeight(10),
+                    Text('Save')
+                  ],
+                ),
+                Column(
+                  children: [
+                    GestureDetector(
+                      onTap: (){},
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Color(0xffFBF3FF),
+                          borderRadius: BorderRadius.circular(5.r),
+                        ),
+                        height: 55.h,
+                        width: 55.h,
+                        child: Icon(Icons.visibility_outlined, color: Colors.purple,)
+                      ),
+                    ),
+                    addHeight(10),
+                    Text('View Passport')
+                  ],
+                ),
+                Column(
+                  children: [
+                    GestureDetector(
+                      onTap: (){},
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Color(0xffF6F7FF),
+                          borderRadius: BorderRadius.circular(5.r),
+                        ),
+                        height: 60.h,
+                        width: 60.h,
+                        child: Icon(Icons.share_outlined)
+                      ),
+                    ),
+                    addHeight(10),
+                    Text('Share')
+                  ],
+                ),
+                
+              ],
+            ),
             // Expanded(
             //   child: Column(
             //     crossAxisAlignment: CrossAxisAlignment.start,
@@ -133,8 +202,6 @@ class _PassportDetailScreenState extends State<PassportDetailScreen> {
             //     ],
             //   ),
             // ),
-
-            
           ],
         ),
       ),
