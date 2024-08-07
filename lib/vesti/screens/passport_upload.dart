@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
+// import 'package:permission_handler/permission_handler.dart';
 import 'package:test_app_2/vesti/screens/passport_review.dart';
 import 'package:test_app_2/vesti/widgets/passport_image.dart';
 import 'package:test_app_2/vesti/widgets/text_tiles.dart';
@@ -21,12 +22,52 @@ class _PassportUploadScreenState extends ConsumerState<PassportUploadScreen> {
   final ImagePicker _picker = ImagePicker();
 
   Future<void> attemptSelectImage() async {
+    // PermissionStatus cameraPermission = await Permission.camera.request();
+    // PermissionStatus storagePermission = await Permission.photos.request();
+
     final pickedFile = await _picker.pickImage(source: ImageSource.gallery);
     if (pickedFile != null) {
       setState(() {
         _image = pickedFile;
       });
     }
+    // if (cameraPermission.isGranted && storagePermission.isGranted) {
+      
+    // } else {
+    //   // Handle the case when permission is denied or restricted
+    //   if (cameraPermission.isDenied || storagePermission.isDenied) {
+    //     // You can show a dialog to the user explaining why the permissions are needed
+    //     showDialog(
+    //       context: context,
+    //       builder: (BuildContext context) {
+    //         return AlertDialog(
+    //           title: Text('Permissions Required'),
+    //           content: Text(
+    //               'Please grant camera and storage permissions to upload a passport image.'),
+    //           actions: <Widget>[
+    //             TextButton(
+    //               child: Text('Cancel'),
+    //               onPressed: () {
+    //                 Navigator.of(context).pop();
+    //               },
+    //             ),
+    //             TextButton(
+    //               child: Text('Open Settings'),
+    //               onPressed: () async {
+    //                 Navigator.of(context).pop();
+    //                 await openAppSettings(); // Open app settings to allow the user to manually grant permissions
+    //               },
+    //             ),
+    //           ],
+    //         );
+    //       },
+    //     );
+    //   } else if (cameraPermission.isPermanentlyDenied ||
+    //       storagePermission.isPermanentlyDenied) {
+    //     // Open app settings so the user can manually grant the permissions
+    //     await openAppSettings();
+    //   }
+    // }
   }
 
   void _removeImage() {
@@ -57,7 +98,7 @@ class _PassportUploadScreenState extends ConsumerState<PassportUploadScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Always have your Passport photo\nhandy!',
+              'Always have your international passport\nhandy!',
               style: TextStyle(
                   color: Color(0xff518C36),
                   fontSize: 18.sp,
@@ -133,7 +174,7 @@ class _PassportUploadScreenState extends ConsumerState<PassportUploadScreen> {
                       SizedBox(width: 4.w),
                       Expanded(
                         child: Text(
-                          'Please ensure the following before uploading your passport image:',
+                          'Please ensure the following before uploading your international passport:',
                           style: TextStyle(
                               fontSize: 12.sp, fontWeight: FontWeight.w500),
                         ),
@@ -188,8 +229,7 @@ class _PassportUploadScreenState extends ConsumerState<PassportUploadScreen> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) =>
-                                     PassportReviewScreen(
+                                builder: (context) => PassportReviewScreen(
                                       imagePath: _image!.path,
                                     )));
                       },

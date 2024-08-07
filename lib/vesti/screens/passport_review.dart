@@ -1,16 +1,23 @@
 import 'dart:io';
-
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:test_app_2/vesti/services/api_services.dart';
 import 'package:test_app_2/vesti/widgets/button.dart';
 import 'package:test_app_2/vesti/widgets/outlined_button.dart';
 import 'package:test_app_2/vesti/widgets/upload_success.dart';
 
-class PassportReviewScreen extends StatelessWidget {
+class PassportReviewScreen extends StatefulWidget {
   const PassportReviewScreen({super.key, required this.imagePath});
 
   final String imagePath;
 
+  @override
+  State<PassportReviewScreen> createState() => _PassportReviewScreenState();
+}
+
+class _PassportReviewScreenState extends State<PassportReviewScreen> {
+  bool _isLoading = false;
   @override
   Widget build(BuildContext context) {
     Widget addHeight(double height) => SizedBox(height: height.h);
@@ -37,6 +44,44 @@ class PassportReviewScreen extends StatelessWidget {
       );
     }
 
+    Future<void> sendData() async {
+      var file = await MultipartFile.fromFile(
+        widget.imagePath,
+        filename: "passport_image.jpg",
+      );
+
+      var formData = FormData.fromMap({
+        "passportPicture": file,
+      });
+      setState(() {
+        _isLoading = true;
+      });
+      try {
+        await ApiCall.getInstance().postReq(
+            '/identity-verification/upload-passport',
+            formData: formData);
+        openUploadSuccessModal();
+      } on DioException catch (e) {
+        print("Error uploading image: $e");
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Failed to upload image'),
+            backgroundColor: Colors.red.shade300,
+            action: SnackBarAction(
+                label: 'okay',
+                textColor: Colors.white,
+                onPressed: () {
+                  ScaffoldMessenger.of(context).hideCurrentSnackBar();
+                }),
+          ),
+        );
+      } finally {
+        setState(() {
+          _isLoading = false;
+        });
+      }
+    }
+
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -46,7 +91,7 @@ class PassportReviewScreen extends StatelessWidget {
           icon: Icon(Icons.arrow_back),
         ),
         title: Text(
-          'Password Document',
+          'Passport Document',
           style: TextStyle(fontWeight: FontWeight.w700, fontSize: 14.sp),
         ),
         centerTitle: true,
@@ -76,19 +121,23 @@ class PassportReviewScreen extends StatelessWidget {
                 color: Colors.grey,
                 borderRadius: BorderRadius.circular(12.r),
                 image: DecorationImage(
-                  image: FileImage(File(imagePath)),
+                  image: FileImage(File(widget.imagePath)),
                   fit: BoxFit.cover,
                 ),
               ),
             ),
             addHeight(80),
-            MyButton(
-                label: 'Photo is clear and visible',
-                onPressed: openUploadSuccessModal),
+            MyButton(label: _isLoading? null : 'Photo is clear and visible', onPressed: _isLoading? null: sendData, child: _isLoading
+                  ? CircularProgressIndicator(
+                      color: Colors.white,
+                      strokeWidth: 2.0,
+                    )
+                  : null,
+            ),
             addHeight(13),
             MyOutlinedButton(
                 label: 'Use another photo',
-                onPressed: () {
+                onPressed: _isLoading? null : () {
                   Navigator.pop(context);
                 })
           ],
