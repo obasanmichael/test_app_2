@@ -193,7 +193,7 @@ class _PassportUploadScreenState extends ConsumerState<PassportUploadScreen> {
                   addHeight(8),
                   TextTiles(
                     icon: Icon(
-                      Icons.card_travel_outlined,
+                      Icons.perm_identity_outlined,
                       color: Color(0xff3E6F26),
                       size: 20,
                     ),
