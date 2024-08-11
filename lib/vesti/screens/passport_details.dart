@@ -1,8 +1,9 @@
-import 'package:dio/dio.dart';
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:test_app_2/vesti/services/api_services.dart';
+import 'package:test_app_2/vesti/services/passport_service.dart';
 
 class PassportDetailScreen extends StatefulWidget {
   const PassportDetailScreen({super.key});
@@ -17,45 +18,23 @@ class _PassportDetailScreenState extends State<PassportDetailScreen> {
 
   bool _isLoading = false;
   String? passportImageUrl;
+  late PassportService _passportService;
 
   @override
   void initState() {
     super.initState();
+    _passportService = PassportService(context);
     fetchPassportImage();
   }
 
   Future<void> fetchPassportImage() async {
-    try {
-      setState(() {
-        _isLoading = true;
-      });
-      final response = await ApiCall.getInstance()
-          .getReq('/identity-verification/passport-image');
-
-      print('API Response: ${response.data}');
-      setState(() {
-        passportImageUrl = response.data['passportUrlImage'] as String?;
-        _isLoading = false;
-      });
-    } on DioException catch (e) {
-      print("Error fetching image: $e");
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text('Failed to fetch image'),
-          backgroundColor: Colors.red.shade300,
-          action: SnackBarAction(
-            label: 'okay',
-            textColor: Colors.white,
-            onPressed: () {
-              ScaffoldMessenger.of(context).hideCurrentSnackBar();
-            },
-          ),
-        ),
-      );
-      setState(() {
-        _isLoading = false;
-      });
-    }
+    setState(() {
+      _isLoading = true;
+    });
+    passportImageUrl = await _passportService.fetchPassportImage();
+    setState(() {
+      _isLoading = false;
+    });
   }
 
   @override
@@ -127,7 +106,9 @@ class _PassportDetailScreenState extends State<PassportDetailScreen> {
                       Column(
                         children: [
                           GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              _passportService.saveImage(passportImageUrl!);
+                            },
                             child: Container(
                               decoration: BoxDecoration(
                                 color: Color(0xffDFFFD0),
@@ -154,7 +135,9 @@ class _PassportDetailScreenState extends State<PassportDetailScreen> {
                       Column(
                         children: [
                           GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              _passportService.viewImage(passportImageUrl!);
+                            },
                             child: Container(
                                 decoration: BoxDecoration(
                                   color: Color(0xffFBF3FF),
@@ -174,7 +157,9 @@ class _PassportDetailScreenState extends State<PassportDetailScreen> {
                       Column(
                         children: [
                           GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              _passportService.shareImage(passportImageUrl!);
+                            },
                             child: Container(
                                 decoration: BoxDecoration(
                                   color: Color(0xffF6F7FF),
@@ -195,6 +180,7 @@ class _PassportDetailScreenState extends State<PassportDetailScreen> {
       ),
     );
   }
+}
 
   // final Map<String, bool> copiedStatus = {
   //   'firstName': false,
@@ -334,4 +320,3 @@ class _PassportDetailScreenState extends State<PassportDetailScreen> {
   //     ),
   //   );
   // }
-}

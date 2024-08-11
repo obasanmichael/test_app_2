@@ -20,7 +20,7 @@ class PassportImage extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 10.h),
           child: Center(
             child: Image.file(
-              height: 240.h,
+              height: 200.h,
               width: double.infinity,
               passportImage,
               fit: BoxFit.cover,

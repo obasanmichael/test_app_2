@@ -1,11 +1,10 @@
 import 'dart:io';
-
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
-// import 'package:permission_handler/permission_handler.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:test_app_2/vesti/screens/passport_review.dart';
 import 'package:test_app_2/vesti/widgets/passport_image.dart';
 import 'package:test_app_2/vesti/widgets/text_tiles.dart';
@@ -21,53 +20,116 @@ class _PassportUploadScreenState extends ConsumerState<PassportUploadScreen> {
   XFile? _image;
   final ImagePicker _picker = ImagePicker();
 
-  Future<void> attemptSelectImage() async {
-    // PermissionStatus cameraPermission = await Permission.camera.request();
-    // PermissionStatus storagePermission = await Permission.photos.request();
-
-    final pickedFile = await _picker.pickImage(source: ImageSource.gallery);
-    if (pickedFile != null) {
-      setState(() {
-        _image = pickedFile;
-      });
+  
+  Future<void> _selectImage(ImageSource source) async {
+    PermissionStatus status;
+    if (source == ImageSource.gallery) {
+      status = await Permission.photos.request();
+    } else {
+      status = await Permission.camera.request();
     }
-    // if (cameraPermission.isGranted && storagePermission.isGranted) {
-      
-    // } else {
-    //   // Handle the case when permission is denied or restricted
-    //   if (cameraPermission.isDenied || storagePermission.isDenied) {
-    //     // You can show a dialog to the user explaining why the permissions are needed
-    //     showDialog(
-    //       context: context,
-    //       builder: (BuildContext context) {
-    //         return AlertDialog(
-    //           title: Text('Permissions Required'),
-    //           content: Text(
-    //               'Please grant camera and storage permissions to upload a passport image.'),
-    //           actions: <Widget>[
-    //             TextButton(
-    //               child: Text('Cancel'),
-    //               onPressed: () {
-    //                 Navigator.of(context).pop();
-    //               },
-    //             ),
-    //             TextButton(
-    //               child: Text('Open Settings'),
-    //               onPressed: () async {
-    //                 Navigator.of(context).pop();
-    //                 await openAppSettings(); // Open app settings to allow the user to manually grant permissions
-    //               },
-    //             ),
-    //           ],
-    //         );
-    //       },
-    //     );
-    //   } else if (cameraPermission.isPermanentlyDenied ||
-    //       storagePermission.isPermanentlyDenied) {
-    //     // Open app settings so the user can manually grant the permissions
-    //     await openAppSettings();
-    //   }
-    // }
+
+    if (status.isGranted) {
+      final pickedFile = await _picker.pickImage(source: source);
+      if (pickedFile != null) {
+        setState(() {
+          _image = pickedFile;
+        });
+      }
+    } else if (status.isDenied) {
+      _showPermissionDeniedDialog(source);
+    } else if (status.isPermanentlyDenied) {
+      _showPermissionPermanentlyDeniedDialog();
+    }
+  }
+
+
+  void _showImageSourceDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Choose an option'),
+          content: SingleChildScrollView(
+            child: ListBody(
+              children: <Widget>[
+                ListTile(
+                  leading: Icon(Icons.photo_library),
+                  title: Text('Gallery'),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                    _selectImage(ImageSource.gallery);
+                  },
+                ),
+                ListTile(
+                  leading: Icon(Icons.photo_camera),
+                  title: Text('Camera'),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                    _selectImage(ImageSource.camera);
+                  },
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+  void _showPermissionDeniedDialog(ImageSource source) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Permission Required'),
+          content: Text(
+              'This app needs permission to access your ${source == ImageSource.gallery ? 'gallery' : 'camera'} to select a passport image.'),
+          actions: <Widget>[
+            TextButton(
+              child: Text('Cancel'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+            TextButton(
+              child: Text('Try Again'),
+              onPressed: () {
+                Navigator.of(context).pop();
+                _selectImage(source); // Re-attempt permission request
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  void _showPermissionPermanentlyDeniedDialog() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Permission Permanently Denied'),
+          content: Text(
+              'Permission to access your gallery or camera has been permanently denied. Please enable it in your device settings.'),
+          actions: <Widget>[
+            TextButton(
+              child: Text('Cancel'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+            TextButton(
+              child: Text('Open Settings'),
+              onPressed: () {
+                Navigator.of(context).pop();
+                openAppSettings(); 
+              },
+            ),
+          ],
+        );
+      },
+    );
   }
 
   void _removeImage() {
@@ -98,7 +160,7 @@ class _PassportUploadScreenState extends ConsumerState<PassportUploadScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Always have your international passport\nhandy!',
+              'Always have your international passport handy!',
               style: TextStyle(
                   color: Color(0xff518C36),
                   fontSize: 18.sp,
@@ -138,7 +200,7 @@ class _PassportUploadScreenState extends ConsumerState<PassportUploadScreen> {
                               addHeight(10),
                               TextButton(
                                   onPressed: () async {
-                                    attemptSelectImage();
+                                    _showImageSourceDialog(context);
                                   },
                                   child: Text(
                                     'Add image',
@@ -154,7 +216,7 @@ class _PassportUploadScreenState extends ConsumerState<PassportUploadScreen> {
                     passportImage: File(_image!.path),
                     onCancel: _removeImage,
                   ),
-            addHeight(34.h),
+            addHeight(25.h),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 10.h),
               decoration: BoxDecoration(

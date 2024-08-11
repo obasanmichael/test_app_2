@@ -10,7 +10,7 @@ class UploadSucessModal extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 18.w, vertical: 15.h),
-      height: 400.h,
+      // height: 400.h,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -21,10 +21,19 @@ class UploadSucessModal extends StatelessWidget {
                   onPressed: () {
                     Navigator.pop(context);
                   },
-                  icon: Icon(Icons.cancel_outlined, color: Color(0xf2B5219),)),
+                  icon: Icon(
+                    Icons.cancel_outlined,
+                    color: Color(0xff2B5219),
+                  )),
             ],
           ),
-          Spacer(),
+          Center(
+            child: Image.asset(
+              'assets/ani.gif',
+              height: 100.h,
+            ),
+          ),
+          SizedBox(height: 15.h),
           Text(
             'Passport Uploaded Successfully',
             style: TextStyle(
@@ -49,7 +58,8 @@ class UploadSucessModal extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                         builder: (context) => const PassportDetailScreen()));
-              })
+              }),
+              SizedBox(height: 10.h)
         ],
       ),
     );
