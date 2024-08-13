@@ -10,7 +10,9 @@ import 'package:test_app_2/vesti/widgets/passport_image.dart';
 import 'package:test_app_2/vesti/widgets/text_tiles.dart';
 
 class PassportUploadScreen extends ConsumerStatefulWidget {
-  const PassportUploadScreen({super.key});
+  const PassportUploadScreen({super.key, this.isReplacing = false});
+
+  final bool isReplacing;
 
   @override
   _PassportUploadScreenState createState() => _PassportUploadScreenState();
@@ -20,29 +22,48 @@ class _PassportUploadScreenState extends ConsumerState<PassportUploadScreen> {
   XFile? _image;
   final ImagePicker _picker = ImagePicker();
 
-  
-  Future<void> _selectImage(ImageSource source) async {
-    PermissionStatus status;
-    if (source == ImageSource.gallery) {
-      status = await Permission.photos.request();
+  void _uploadImage() async {
+    if (widget.isReplacing && _image != null) {
+      Navigator.pop(context, _image!.path); // Return the new image path
     } else {
-      status = await Permission.camera.request();
-    }
-
-    if (status.isGranted) {
-      final pickedFile = await _picker.pickImage(source: source);
-      if (pickedFile != null) {
-        setState(() {
-          _image = pickedFile;
-        });
-      }
-    } else if (status.isDenied) {
-      _showPermissionDeniedDialog(source);
-    } else if (status.isPermanentlyDenied) {
-      _showPermissionPermanentlyDeniedDialog();
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => PassportReviewScreen(
+                    imagePath: _image!.path,
+                  )));
     }
   }
 
+  Future<void> _selectImage(ImageSource source) async {
+    final pickedFile = await _picker.pickImage(source: source);
+    if (pickedFile != null) {
+      setState(() {
+        _image = pickedFile;
+      });
+    }
+    // PermissionStatus status;
+    //  if (source == ImageSource.gallery) {
+    //   status = await Permission.photos.status;
+    //   if (!status.isGranted) {
+    //     status = await Permission.photos.request();
+    //   }
+    // } else {
+    //   status = await Permission.camera.status;
+    //   if (!status.isGranted) {
+    //     status = await Permission.camera.request();
+    //   }
+    // }
+
+    // // Recheck permission status after request
+    // if (status.isGranted) {
+      
+    // } else if (status.isDenied) {
+    //   _showPermissionDeniedDialog(source);
+    // } else if (status.isPermanentlyDenied) {
+    //   _showPermissionPermanentlyDeniedDialog();
+    // }
+  }
 
   void _showImageSourceDialog(BuildContext context) {
     showDialog(
@@ -76,6 +97,7 @@ class _PassportUploadScreenState extends ConsumerState<PassportUploadScreen> {
       },
     );
   }
+
   void _showPermissionDeniedDialog(ImageSource source) {
     showDialog(
       context: context,
@@ -123,7 +145,7 @@ class _PassportUploadScreenState extends ConsumerState<PassportUploadScreen> {
               child: Text('Open Settings'),
               onPressed: () {
                 Navigator.of(context).pop();
-                openAppSettings(); 
+                openAppSettings();
               },
             ),
           ],
@@ -285,18 +307,19 @@ class _PassportUploadScreenState extends ConsumerState<PassportUploadScreen> {
                       Radius.circular(12.r),
                     )),
                     backgroundColor: Color(0xff67A948)),
-                onPressed: _image == null
-                    ? null
-                    : () async {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => PassportReviewScreen(
-                                      imagePath: _image!.path,
-                                    )));
-                      },
+                onPressed: _image == null ? null : _uploadImage,
+                // () async {
+                //     Navigator.push(
+                //         context,
+                //         MaterialPageRoute(
+                //             builder: (context) => PassportReviewScreen(
+                //                   imagePath: _image!.path,
+                //                 ),
+                //                 ),
+                //                 );
+                //   },
                 child: Text(
-                  'Upload image',
+                  widget.isReplacing ? 'Replace Image' : 'Upload image',
                   style: TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 16.sp,

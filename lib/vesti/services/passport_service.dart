@@ -152,4 +152,40 @@ class PassportService {
       },
     );
   }
+
+  Future<void> updatePassportImage(String imagePath) async {
+    // Check if the file exists
+    final file = File(imagePath);
+    if (!await file.exists()) {
+      print('File does not exist at path: $imagePath');
+      return;
+    }
+
+    final formData = FormData.fromMap({
+      'passport_image': await MultipartFile.fromFile(imagePath),
+    });
+
+    try {
+      final response = await ApiCall.getInstance().patchReq(
+        '/identity-verification/passport-image',
+        formData: formData,
+      );
+
+      if (response.statusCode == 200 || response.statusCode == 201) {
+        print('Passport image updated successfully');
+      } else {
+        print(
+            'Failed to update passport image. Status code: ${response.statusCode}');
+        print('Response data: ${response.data}');
+      }
+    } on DioException catch (e) {
+      print('DioException caught: $e');
+      if (e.response != null) {
+        print('Error response data: ${e.response?.data}');
+        print('Error status code: ${e.response?.statusCode}');
+      }
+    } catch (e) {
+      print('Unexpected error: $e');
+    }
+  }
 }

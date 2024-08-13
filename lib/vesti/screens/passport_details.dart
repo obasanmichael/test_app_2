@@ -1,8 +1,7 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:test_app_2/vesti/screens/passport_upload.dart';
 import 'package:test_app_2/vesti/services/passport_service.dart';
 
 class PassportDetailScreen extends StatefulWidget {
@@ -48,7 +47,7 @@ class _PassportDetailScreenState extends State<PassportDetailScreen> {
           icon: Icon(Icons.arrow_back),
         ),
         title: Text(
-          'Password Document',
+          'Passport Document',
           style: TextStyle(fontWeight: FontWeight.w700, fontSize: 14.sp),
         ),
         centerTitle: true,
@@ -81,7 +80,25 @@ class _PassportDetailScreenState extends State<PassportDetailScreen> {
                     children: [
                       Spacer(),
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () async {
+                          final newImage = await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => PassportUploadScreen(
+                                isReplacing: true,
+                              ),
+                            ),
+                          );
+
+                          if (newImage != null) {
+                            setState(() {
+                              passportImageUrl = newImage;
+                            });
+                            await _passportService
+                                .updatePassportImage(newImage);
+                            fetchPassportImage(); // Refresh the image after updating
+                          }
+                        },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
@@ -91,7 +108,7 @@ class _PassportDetailScreenState extends State<PassportDetailScreen> {
                             ),
                             addWidth(2),
                             Text(
-                              'Delete Passport',
+                              'Replace Passport',
                               style: TextStyle(color: Color(0xffF04438)),
                             )
                           ],
