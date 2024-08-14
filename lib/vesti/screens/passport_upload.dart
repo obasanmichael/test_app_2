@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -9,7 +8,7 @@ import 'package:test_app_2/vesti/screens/passport_review.dart';
 import 'package:test_app_2/vesti/widgets/passport_image.dart';
 import 'package:test_app_2/vesti/widgets/text_tiles.dart';
 
-class PassportUploadScreen extends ConsumerStatefulWidget {
+class PassportUploadScreen extends StatefulWidget {
   const PassportUploadScreen({super.key, this.isReplacing = false});
 
   final bool isReplacing;
@@ -18,7 +17,7 @@ class PassportUploadScreen extends ConsumerStatefulWidget {
   _PassportUploadScreenState createState() => _PassportUploadScreenState();
 }
 
-class _PassportUploadScreenState extends ConsumerState<PassportUploadScreen> {
+class _PassportUploadScreenState extends State<PassportUploadScreen> {
   XFile? _image;
   final ImagePicker _picker = ImagePicker();
 
