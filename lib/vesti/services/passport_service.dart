@@ -154,7 +154,6 @@ class PassportService {
   }
 
   Future<void> updatePassportImage(String imagePath) async {
-    // Check if the file exists
     final file = File(imagePath);
     if (!await file.exists()) {
       print('File does not exist at path: $imagePath');

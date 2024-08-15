@@ -457,4 +457,208 @@ Map<String, String> punjabiText = {
   "enterZipCode": "ਆਪਣਾ ਜ਼ਿਪ ਕੋਡ ਦਰਜ ਕਰੋ",
 
   "amountToFundUSD": "ਫੰਡ ਕਰਨ ਲਈ ਰਕਮ (USD)", //Vesti cards
+  //menu bar
+   "viewProfile": "ਪ੍ਰੋਫ਼ਾਈਲ ਵੇਖੋ",
+
+  "creditHistory": "ਕ੍ਰੈਡਿਟ ਇਤਿਹਾਸ",
+
+  "pathways": "ਪਾਥਵੇਜ਼",
+
+  "growthCommunities": "ਵਿਕਾਸ ਕਮੇਨਿਟੀਆਂ",
+
+  "settings": "ਸੈਟਿੰਗਾਂ",
+
+  "howToUseApp": "ਐਪ ਦਾ ਉਪਯੋਗ ਕਿਵੇਂ ਕਰਨਾ ਹੈ",
+
+  "country": "ਦੇਸ਼",
+
+  "exchangeRate": "ਮੁਦਰਾ ਵਟਾਂਦਰਾ ਦਰ",
+
+  "termsAndPrivacy": "ਨਿਯਮ ਅਤੇ ਪਰਦੇਦਾਰੀ",
+
+  "disclosures": "ਖੁਲਾਸੇ",
+
+  "helpCenter": "ਮਦਦ ਕੇਂਦਰ",
+
+  "logOut": "ਲੌਗ ਆਉਟ ਕਰੋ", //menu bar
+  //credit history
+  "importCreditHistory": "ਕ੍ਰੈਡਿਟ ਇਤਿਹਾਸ ਆਯਾਤ ਕਰੋ",
+
+  "startVestiCreditCardApplication":
+      "ਆਪਣਾ ਵਿਦੇਸ਼ੀ ਕ੍ਰੈਡਿਟ ਇਤਿਹਾਸ ਆਯਾਤ ਕਰਕੇ ਵੇਸਟੀ ਕ੍ਰੈਡਿਟ ਕਾਰਡ ਲਈ ਅਰਜ਼ੀ ਦਾਖਲ ਕਰੋ",
+
+  "noCreditHistoryImported": "ਕੋਈ ਕ੍ਰੈਡਿਟ ਇਤਿਹਾਸ ਆਯਾਤ ਨਹੀਂ ਕੀਤਾ ਗਿਆ",
+
+  "importNigerianCreditHistory":
+      "ਵੇਸਟੀ ਕ੍ਰੈਡਿਟ ਕਾਰਡ ਲਈ ਆਪਣੀ ਅਰਜ਼ੀ ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਆਪਣਾ ਨਾਈਜੀਰੀਆਈ ਕ੍ਰੈਡਿਟ ਇਤਿਹਾਸ ਆਯਾਤ ਕਰੋ",
+
+  "importCreditHistoryAgain": "ਕ੍ਰੈਡਿਟ ਇਤਿਹਾਸ ਆਯਾਤ ਕਰੋ", //credit history
+  //settings
+  "myVestiUsername": "ਮੇਰਾ ਵੇਸਟੀ ਉਪਭੋਗਤਾ ਨਾਮ",
+
+  "providusAccount": "ਪ੍ਰੋਵਿਡਸ ਖਾਤਾ",
+
+  "address": "ਪਤਾ",
+
+  "updatePassword": "ਪਾਸਵਰਡ ਅਪਡੇਟ ਕਰੋ",
+
+  "updateTransactionPin": "ਲੈਣ-ਦੇਣ ਪਿੰਨ ਅਪਡੇਟ ਕਰੋ",
+
+  "editProfile": "ਪ੍ਰੋਫ਼ਾਈਲ ਸੋਧੋ",
+
+  "currency": "ਮੁਦਰਾ",
+
+  "deviceSecurity": "ਜੰਤਰ ਸੁਰੱਖਿਆ",
+
+  "alwaysHideBalance": "ਹਮੇਸ਼ਾਂ ਬੈਲੈਂਸ ਛੁਪਾਓ",
+
+  "securityLock": "ਸੁਰੱਖਿਆ ਲਾਕ",
+
+  "twoFactorAuthentication": "2 ਫੈਕਟਰ ਪਰਮਾਣਕਤਾ",
+
+  "createNewPassword": "ਨਵਾਂ ਪਾਸਵਰਡ ਬਣਾਓ",
+
+  "followGuidelinesForPassword":
+      "ਇੱਕ ਸੁਰੱਖਿਅਤ ਪਾਸਵਰਡ ਬਣਾਉਣ ਲਈ ਸਾਡੀਆਂ ਹਦਾਇਤਾਂ ਦੀ ਪਾਲਣਾ ਕਰੋ",
+
+  "currentPassword": "ਮੌਜੂਦਾ ਪਾਸਵਰਡ",
+
+  "newPassword": "ਨਵਾਂ ਪਾਸਵਰਡ",
+
+  "confirmNewPassword": "ਨਵਾਂ ਪਾਸਵਰਡ ਪੁਸ਼ਟੀ ਕਰੋ",
+
+  "saveNewPassword": "ਨਵਾਂ ਪਾਸਵਰਡ ਸੰਭਾਲੋ",
+
+  "createNewPin": "ਨਵਾਂ ਪਿੰਨ ਬਣਾਓ",
+
+  "followGuidelinesForPin":
+      "ਇੱਕ ਸੁਰੱਖਿਅਤ ਲੈਣ-ਦੇਣ ਪਿੰਨ ਬਣਾਉਣ ਲਈ ਸਾਡੀਆਂ ਹਦਾਇਤਾਂ ਦੀ ਪਾਲਣਾ ਕਰੋ",
+
+  "newPin": "ਨਵਾਂ ਪਿੰਨ",
+
+  "confirmNewPin": "ਨਵਾਂ ਪਿੰਨ ਪੁਸ਼ਟੀ ਕਰੋ",
+
+  "saveNewPin": "ਨਵਾਂ ਪਿੰਨ ਸੰਭਾਲੋ",
+
+  "updateProfile": "ਪ੍ਰੋਫ਼ਾਈਲ ਅਪਡੇਟ ਕਰੋ",
+
+  "edit": "ਸੋਧੋ",
+
+  "phone": "ਫ਼ੋਨ",
+
+  "city": "ਸ਼ਹਿਰ",
+
+  "state": "ਰਾਜ",
+
+  "bankVerificationNumber": "ਬੈਂਕ ਪਰਮਾਣਨ ਨੰਬਰ",
+
+  "username": "ਉਪਭੋਗਤਾ ਨਾਮ", //settings
+  //profile
+  "account": "ਖਾਤਾ",
+
+  "walletBalance": "ਵਾਲਿਟ ਬੈਲੈਂਸ",
+
+  "providusAccountNumber": "ਪ੍ਰੋਵਿਡਸ ਖਾਤਾ ਨੰਬਰ",
+
+  "tapCardToCopyAccountNumber":
+      "ਆਪਣਾ ਖਾਤਾ ਨੰਬਰ ਕਾਪੀ ਕਰਨ ਲਈ ਇਸ ਕਾਰਡ ਨੂੰ ਟੈਪ ਕਰੋ",
+
+  "membership": "ਸਦੱਸਤਾ",
+
+  "clickToSeeAvailablePlans":
+      "ਆਪਣੇ ਰੁਚੀ ਨੂੰ ਪੂਰਾ ਕਰਨ ਲਈ ਸਾਡੇ ਉਪਲਬਧ ਯੋਜਨਾਵਾਂ ਨੂੰ ਦੇਖਣ ਲਈ ਕਲਿੱਕ ਕਰੋ",
+
+  "kycIdentityDocuments": "KYC (ਪਛਾਣ ਦਸਤਾਵੇਜ਼)",
+
+  "uploadOrCheckKYCStatus": "ਆਪਣਾ KYC ਅੱਪਲੋਡ ਕਰੋ ਜਾਂ ਇਸਦੀ ਸਥਿਤੀ ਚੈਕ ਕਰੋ",
+
+  "securitySettings": "ਸੁਰੱਖਿਆ",
+
+  "updatePasswordAndEnable2FA":
+      "ਤੁਸੀਂ ਆਪਣਾ ਪਾਸਵਰਡ ਅਪਡੇਟ ਕਰ ਸਕਦੇ ਹੋ ਅਤੇ ਆਪਣੇ ਖਾਤੇ ਵਿੱਚ 2FA ਵੀ ਪ੍ਰਦਾਨ ਕਰ ਸਕਦੇ ਹੋ",
+
+  "inviteYourFriends": "ਆਪਣੇ ਦੋਸਤਾਂ ਨੂੰ ਸੱਦਾ ਦਿਓ",
+
+  "totalInvitesMade":
+      "ਤੁਸੀਂ ਕੁੱਲ __ ਸੱਦੇ ਦਿੱਤੇ ਹਨ, ਦੋਸਤਾਂ ਨੂੰ ਸੱਦਾ ਦੇਣ ਲਈ ਲਿੰਕ ਸਾਂਝਾ ਕਰਨ ਲਈ ਟੈਪ ਕਰੋ",
+
+  "contactSupportTeam":
+      "ਮਸਲਿਆਂ ਲਈ ਤੁਸੀਂ ਸਾਡੀ ਸਹਾਇਤਾ ਟੀਮ ਨਾਲ ਸੰਪਰਕ ਕਰ ਸਕਦੇ ਹੋ ਅਤੇ ਅਸੀਂ ਜਲਦੀ ਹੀ ਜਵਾਬ ਦੇਵਾਂਗੇ",
+
+  "tourGuide": "ਟੂਰ ਗਾਈਡ",
+
+  "takeTourAndExploreApp":
+      "ਵੇਸਟੀ ਐਪ ਬਾਰੇ ਹੋਰ ਸਿੱਖਣ ਲਈ ਇੱਕ ਦੌਰਾ ਕਰਨ ਲਈ ਕਲਿੱਕ ਕਰੋ",
+
+  "requestAccountDeletion": "ਖਾਤਾ ਮਿਟਾਉਣ ਦੀ ਬੇਨਤੀ ਕਰੋ",
+
+  "requestToDeleteAccount": "ਤੁਸੀਂ ਇਥੇ ਆਪਣਾ ਖਾਤਾ ਮਿਟਾਉਣ ਦੀ ਬੇਨਤੀ ਕਰ ਸਕਦੇ ਹੋ", //profile
+  //kyc verification and tour guide
+  "kycVerification": "KYC ਪੜਤਾਲ",
+
+  "selectPreferredIdentificationMethod":
+      "ਆਪਣੀ ਪਛਾਣ ਦੀ ਪੁਸ਼ਟੀ ਕਰਨ ਲਈ, ਆਪਣੀ ਪਸੰਦੀਦਾ ਪਛਾਣ ਦੇ ਤਰੀਕੇ ਨੂੰ ਚੁਣੋ",
+
+  "accountPassword": "ਖਾਤਾ ਪਾਸਵਰਡ",
+
+  "updateLoginPassword": "ਆਪਣੇ ਲਾਗਿਨ ਪਾਸਵਰਡ ਨੂੰ ਅਪਡੇਟ ਕਰੋ",
+
+  "transactionPin": "ਲੈਣ-ਦੇਣ ਪਿਨ",
+
+  "takeTour": "ਟੂਰ ਲਓ",
+
+  "welcomeToVesti":
+      "ਹੈਲੋ, ਵੇਸਟੀ ਵਿੱਚ ਸੁਆਗਤ ਹੈ! ਜਿਸ ਖੰਡ ਬਾਰੇ ਤੁਸੀਂ ਹੋਰ ਜਾਣਨਾ ਚਾਹੁੰਦੇ ਹੋ ਉਸ ਨੂੰ ਚੁਣੋ ਅਤੇ ਅਸੀਂ ਤੁਹਾਨੂੰ ਕਦਮ-ਦਰ-ਕਦਮ ਦਿਖਾਈਏਗਾ",
+
+  "powerfulWallets": "ਸ਼ਕਤੀਸ਼ਾਲੀ ਵਾਲਿਟਸ",
+
+  "pathwaysToMoveAbroad": "ਵਿਦੇਸ਼ੀ ਮਾਈਗਰੇਸ਼ਨ ਰਸਤੇ",
+
+  "cardsThatWorkEverywhere": "ਕਾਰਡ ਜੋ ਹਰ ਜਗ੍ਹਾ ਕੰਮ ਕਰਦੇ ਹਨ",
+
+  "affordableFlights": "ਸਸਤੇ ਉਡਾਣਾਂ",
+
+  "findMyWayAroundThanks": "ਮੈਂ ਆਪਣਾ ਰਸਤਾ ਲੱਭ ਸਕਦਾ ਹਾਂ, ਧੰਨਵਾਦ",
+
+  "selectWalletFeatureToLearn":
+      "ਜਿਸ ਵਾਲਿਟ ਫੀਚਰ ਬਾਰੇ ਤੁਸੀਂ ਸਿੱਖਣਾ ਚਾਹੁੰਦੇ ਹੋ ਉਸ ਨੂੰ ਚੁਣੋ",
+
+  "allFeatures": "ਸਾਰੀਆਂ ਫੀਚਰ",
+
+  "allMoney": "ਸਾਰਾ ਪੈਸਾ",
+
+  "sendMoney": "ਪੈਸਾ ਭੇਜੋ",
+
+  "addWallet": "ਵਾਲਿਟ ਸ਼ਾਮਿਲ ਕਰੋ",
+
+  "selectPathwayFeatureToLearn":
+      "ਜਿਸ ਰਸਤੇ ਦੀ ਫੀਚਰ ਬਾਰੇ ਤੁਸੀਂ ਸਿੱਖਣਾ ਚਾਹੁੰਦੇ ਹੋ ਉਸ ਨੂੰ ਚੁਣੋ",
+
+  "joinPathway": "ਇੱਕ ਰਸਤਾ ਜੁੜੋ",
+
+  "selectCardFeatureToLearn":
+      "ਜਿਸ ਕਾਰਡ ਦੀ ਫੀਚਰ ਬਾਰੇ ਤੁਸੀਂ ਸਿੱਖਣਾ ਚਾਹੁੰਦੇ ਹੋ ਉਸ ਨੂੰ ਚੁਣੋ",
+
+  "fundVirtualCard": "ਵਰਚੁਅਲ ਕਾਰਡ ਨੂੰ ਫੰਡ ਕਰੋ",
+
+  "makeTransaction": "ਲੈਣ-ਦੇਣ ਕਰੋ",
+
+  "requestPhysicalCard": "ਫ਼ਿਜ਼ੀਕਲ ਕਾਰਡ ਦੀ ਬੇਨਤੀ ਕਰੋ", //kyc verification and tour guide
+  //Book a flight modal
+  "clickBookFlightCard": "'ਬੁੱਕ ਫਲਾਈਟ' ਕਾਰਡ 'ਤੇ ਕਲਿੱਕ ਕਰੋ ਜੋ ਮੁੱਖ ਪੇਜ 'ਤੇ ਹੈ",
+
+  "selectDestination": "ਉਸ ਸੂਚੀ ਵਿੱਚੋਂ ਆਪਣੇ ਗੰਤੀ ਨੂੰ ਚੁਣੋ ਜੋ ਦਿੱਤੀ ਜਾਵੇਗੀ",
+
+  "selectTicketType": "ਟਿਕਟ ਦੀ ਕਿਸਮ ਚੁਣੋ (ਵਾਪਸੀ/ਇੱਕ ਦਿਸ਼ਾ)",
+
+  "selectTakeOffAndDestination": "ਆਪਣੇ ਉੱਡਣ ਵਾਲੇ ਸਥਾਨ ਅਤੇ ਗੰਤੀ ਨੂੰ ਚੁਣੋ",
+
+  "selectDepartureDate":
+      "ਤੁਸੀਂ ਆਪਣੀ ਪ੍ਰਵਾਨਗੀ ਦੀ ਤਾਰੀਖ ਚੁਣ ਸਕਦੇ ਹੋ ਅਤੇ ਆਪਣੇ ਫਲਾਈਟ ਦੀ ਖੋਜ ਕਰ ਸਕਦੇ ਹੋ",
+
+  "selectFlightAndPay":
+      "ਆਪਣੇ ਉਪਯੋਗੀ ਫਲਾਈਟ ਦੀ ਚੋਣ ਕਰੋ ਅਤੇ ਭੁਗਤਾਨ ਕਰਨ ਲਈ ਅਗੇ ਵਧੋ",
+
+  "ticketDisplayAfterPayment":
+      "ਜਦੋਂ ਤੁਸੀਂ ਸਫਲਤਾਪੂਰਵਕ ਭੁਗਤਾਨ ਕਰ ਲਵੋਗੇ, ਤੁਹਾਡੀ ਟਿਕਟ ਸਕ੍ਰੀਨ 'ਤੇ ਦਿਖਾਈ ਦੇਵੇਗੀ", //Book a flight modal
 };

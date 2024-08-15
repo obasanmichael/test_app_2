@@ -463,4 +463,212 @@ Map<String, String> frenchText = {//auth
   "enterZipCode": "Entrez votre code postal",
 
   "amountToFundUSD": "Montant à Financer (USD)", //Vesti Cards
+  //menu bar
+  "viewProfile": "Voir le Profil",
+
+  "creditHistory": "Historique de Crédit",
+
+  "pathways": "Chemins",
+
+  "growthCommunities": "Communautés de Croissance",
+
+  "settings": "Paramètres",
+
+  "howToUseApp": "Comment utiliser l'App",
+
+  "country": "Pays",
+
+  "exchangeRate": "Taux de Change",
+
+  "termsAndPrivacy": "Conditions et Confidentialité",
+
+  "disclosures": "Divulgations",
+
+  "helpCenter": "Centre d'Aide",
+
+  "logOut": "Se Déconnecter", //menu Bar
+  //credit History
+  "importCreditHistory": "Importer l'Historique de Crédit",
+
+  "startVestiCreditCardApplication":
+      "Commencez la demande de carte de crédit Vesti en important votre historique de crédit étranger",
+
+  "noCreditHistoryImported": "Aucun historique de crédit importé",
+
+  "importNigerianCreditHistory":
+      "Importez votre historique de crédit nigérian pour commencer votre demande de carte de crédit Vesti",
+
+  "importCreditHistoryAgain": "Importer l'Historique de Crédit", //credit history
+  //settings
+  "myVestiUsername": "Mon Nom d'Utilisateur Vesti",
+
+  "providusAccount": "Compte Providus",
+
+  "address": "Adresse",
+
+  "updatePassword": "Mettre à Jour le Mot de Passe",
+
+  "updateTransactionPin": "Mettre à Jour le Code Pin de Transaction",
+
+  "editProfile": "Modifier le Profil",
+
+  "currency": "Devise",
+
+  "deviceSecurity": "Sécurité de l'Appareil",
+
+  "alwaysHideBalance": "Toujours Masquer le Solde",
+
+  "securityLock": "Verrouillage de Sécurité",
+
+  "twoFactorAuthentication": "Authentification à 2 Facteurs",
+
+  "createNewPassword": "Créer un Nouveau Mot de Passe",
+
+  "followGuidelinesForPassword":
+      "Suivez nos directives pour créer un mot de passe sécurisé",
+
+  "currentPassword": "Mot de Passe Actuel",
+
+  "newPassword": "Nouveau Mot de Passe",
+
+  "confirmNewPassword": "Confirmer le Nouveau Mot de Passe",
+
+  "saveNewPassword": "Enregistrer le Nouveau Mot de Passe",
+
+  "createNewPin": "Créer un Nouveau Code Pin",
+
+  "followGuidelinesForPin":
+      "Suivez nos directives pour créer un code pin de transaction sécurisé",
+
+  "newPin": "Nouveau Code Pin",
+
+  "confirmNewPin": "Confirmer le Nouveau Code Pin",
+
+  "saveNewPin": "Enregistrer le Nouveau Code Pin",
+
+  "updateProfile": "Mettre à Jour le Profil",
+
+  "edit": "Modifier",
+
+  "phone": "Téléphone",
+
+  "city": "Ville",
+
+  "state": "État",
+
+  "bankVerificationNumber": "Numéro de Vérification Bancaire",
+
+  "username": "Nom d'Utilisateur", //settings
+  //profile
+   "account": "Compte",
+
+  "walletBalance": "Solde du Portefeuille",
+
+  "providusAccountNumber": "Numéro de Compte Providus",
+
+  "tapCardToCopyAccountNumber":
+      "Appuyez sur cette carte pour copier votre numéro de compte",
+
+  "membership": "Adhésion",
+
+  "clickToSeeAvailablePlans":
+      "Cliquez pour voir nos plans disponibles qui correspondent à vos intérêts",
+
+  "kycIdentityDocuments": "KYC (Documents d'Identité)",
+
+  "uploadOrCheckKYCStatus": "Téléchargez ou vérifiez le statut de votre KYC",
+
+  "securitySettings": "Sécurité",
+
+  "updatePasswordAndEnable2FA":
+      "Vous pouvez mettre à jour votre mot de passe et également activer 2FA sur votre compte",
+
+  "inviteYourFriends": "Invitez vos amis",
+
+  "totalInvitesMade":
+      "Vous avez fait un total de __ invitations, appuyez pour partager le lien pour inviter des amis",
+
+  "contactSupportTeam":
+      "Vous pouvez contacter notre équipe de support pour des problèmes et nous répondrons rapidement",
+
+  "tourGuide": "Guide Touristique",
+
+  "takeTourAndExploreApp":
+      "Cliquez pour faire un tour et explorer pour en savoir plus sur l'App Vesti",
+
+  "requestAccountDeletion": "Demander la Suppression du Compte",
+
+  "requestToDeleteAccount":
+      "Vous pouvez demander la suppression de votre compte ici", //profile
+  //kyc Verification and Tour Guide
+  "kycVerification": "Vérification KYC",
+
+  "selectPreferredIdentificationMethod":
+      "Pour vérifier votre identité, sélectionnez votre moyen d'identification préféré",
+
+  "accountPassword": "Mot de passe du compte",
+
+  "updateLoginPassword": "Mettez à jour votre mot de passe de connexion",
+
+  "transactionPin": "PIN de Transaction",
+
+  "takeTour": "Faire une visite",
+
+  "welcomeToVesti":
+      "Bonjour, bienvenue sur Vesti ! Sélectionnez la section que vous souhaitez explorer et nous vous guiderons étape par étape",
+
+  "powerfulWallets": "Portefeuilles puissants",
+
+  "pathwaysToMoveAbroad": "Chemins pour déménager à l'étranger",
+
+  "cardsThatWorkEverywhere": "Cartes qui fonctionnent partout",
+
+  "affordableFlights": "Vols abordables",
+
+  "findMyWayAroundThanks": "Je peux me repérer, merci",
+
+  "selectWalletFeatureToLearn":
+      "Sélectionnez la fonctionnalité du portefeuille que vous souhaitez apprendre",
+
+  "allFeatures": "Toutes les fonctionnalités",
+
+  "allMoney": "Tout l'argent",
+
+  "sendMoney": "Envoyer de l'argent",
+
+  "addWallet": "Ajouter un portefeuille",
+
+  "selectPathwayFeatureToLearn":
+      "Sélectionnez la fonctionnalité du chemin que vous souhaitez apprendre",
+
+  "joinPathway": "Rejoindre un chemin",
+
+  "selectCardFeatureToLearn":
+      "Sélectionnez la fonctionnalité de la carte que vous souhaitez apprendre",
+
+  "fundVirtualCard": "Financer la carte virtuelle",
+
+  "makeTransaction": "Effectuer une transaction",
+
+  "requestPhysicalCard": "Demander une carte physique", //kyc Verification and tour guide
+  //Book a flight modal
+  "clickBookFlightCard":
+      "Cliquez sur la carte 'Réserver un vol' sur la page d'accueil",
+
+  "selectDestination":
+      "Sélectionnez votre destination dans la liste qui sera fournie",
+
+  "selectTicketType":
+      "Procédez à sélectionner le type de billet (Aller/Retour)",
+
+  "selectTakeOffAndDestination":
+      "Sélectionnez votre lieu de départ et votre destination",
+
+  "selectDepartureDate":
+      "Vous pouvez sélectionner votre date de départ et rechercher votre vol",
+
+  "selectFlightAndPay": "Sélectionnez votre vol et procédez au paiement",
+
+  "ticketDisplayAfterPayment":
+      "Une fois le paiement effectué avec succès, votre billet sera affiché à l'écran", //Book a flight modal
 };

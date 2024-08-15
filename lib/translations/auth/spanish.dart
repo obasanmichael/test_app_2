@@ -461,4 +461,209 @@ Map<String, String> spanishText = {
   "enterZipCode": "Ingresa tu código postal",
 
   "amountToFundUSD": "Monto a Financiar (USD)", //Vesti cards
+  //menu bar
+  "viewProfile": "Ver Perfil",
+
+  "creditHistory": "Historial de Crédito",
+
+  "pathways": "Trayectorias",
+
+  "growthCommunities": "Comunidades de Crecimiento",
+
+  "settings": "Configuraciones",
+
+  "howToUseApp": "Cómo usar la App",
+
+  "country": "País",
+
+  "exchangeRate": "Tipo de Cambio",
+
+  "termsAndPrivacy": "Términos y Privacidad",
+
+  "disclosures": "Divulgaciones",
+
+  "helpCenter": "Centro de Ayuda",
+
+  "logOut": "Cerrar sesión", //menu Bar
+  //credit History
+  "importCreditHistory": "Importar Historial de Crédito",
+
+  "startVestiCreditCardApplication":
+      "Comienza la solicitud para una tarjeta de crédito Vesti importando tu historial de crédito extranjero",
+
+  "noCreditHistoryImported": "No se ha importado historial de crédito",
+
+  "importNigerianCreditHistory":
+      "Importa tu historial de crédito nigeriano para comenzar tu solicitud para la tarjeta de crédito Vesti",
+
+  "importCreditHistoryAgain": "Importar Historial de Crédito", //credit History
+  //settings
+
+  "myVestiUsername": "Mi Nombre de Usuario en Vesti",
+
+  "providusAccount": "Cuenta de Providus",
+
+  "address": "Dirección",
+
+  "updatePassword": "Actualizar Contraseña",
+
+  "updateTransactionPin": "Actualizar Pin de Transacción",
+
+  "editProfile": "Editar Perfil",
+
+  "currency": "Moneda",
+
+  "deviceSecurity": "Seguridad del Dispositivo",
+
+  "alwaysHideBalance": "Siempre Ocultar Saldo",
+
+  "securityLock": "Bloqueo de Seguridad",
+
+  "twoFactorAuthentication": "Autenticación de 2 Factores",
+
+  "createNewPassword": "Crear Nueva Contraseña",
+
+  "followGuidelinesForPassword":
+      "Sigue nuestras pautas para crear una contraseña segura",
+
+  "currentPassword": "Contraseña Actual",
+
+  "newPassword": "Nueva Contraseña",
+
+  "confirmNewPassword": "Confirmar nueva contraseña",
+
+  "saveNewPassword": "Guardar Nueva Contraseña",
+
+  "createNewPin": "Crear Nuevo Pin",
+
+  "followGuidelinesForPin":
+      "Sigue nuestras pautas para crear un pin de transacción seguro",
+
+  "newPin": "Nuevo Pin",
+
+  "confirmNewPin": "Confirmar nuevo pin",
+
+  "saveNewPin": "Guardar Nuevo Pin",
+
+  "updateProfile": "Actualizar Perfil",
+
+  "edit": "Editar",
+
+  "phone": "Teléfono",
+
+  "city": "Ciudad",
+
+  "state": "Estado",
+
+  "bankVerificationNumber": "Número de Verificación Bancaria",
+
+  "username": "Nombre de Usuario", //settings
+  //profile
+  "account": "Cuenta",
+
+  "walletBalance": "Saldo de la Cartera",
+
+  "providusAccountNumber": "Número de Cuenta Providus",
+
+  "tapCardToCopyAccountNumber":
+      "Toca esta tarjeta para copiar tu número de cuenta",
+
+  "membership": "Membresía",
+
+  "clickToSeeAvailablePlans":
+      "Haz clic para ver nuestros planes disponibles que se ajustan a tus intereses",
+
+  "kycIdentityDocuments": "KYC (Documentos de Identidad)",
+
+  "uploadOrCheckKYCStatus": "Sube o verifica el estado de tu KYC",
+
+  "securitySettings": "Seguridad",
+
+  "updatePasswordAndEnable2FA":
+      "Puedes actualizar tu contraseña y también habilitar 2FA en tu cuenta",
+
+  "inviteYourFriends": "Invita a tus amigos",
+
+  "totalInvitesMade":
+      "Has realizado un total de __ invitaciones, toca para compartir el enlace y invitar a amigos",
+
+  "contactSupportTeam":
+      "Puedes contactar a nuestro equipo de soporte para problemas y responderemos rápidamente",
+
+  "tourGuide": "Guía de Recorrido",
+
+  "takeTourAndExploreApp":
+      "Haz clic para hacer un recorrido y explorar para aprender más sobre la App Vesti",
+
+  "requestAccountDeletion": "Solicitar Eliminación de Cuenta",
+
+  "requestToDeleteAccount": "Puedes solicitar eliminar tu cuenta aquí", //profile
+  //kyc verification and tour guide
+  "kycVerification": "Verificación KYC",
+
+  "selectPreferredIdentificationMethod":
+      "Para verificar tu identidad, selecciona tu medio de identificación preferido",
+
+  "accountPassword": "Contraseña de la Cuenta",
+
+  "updateLoginPassword": "Actualiza tu contraseña de inicio de sesión",
+
+  "transactionPin": "PIN de Transacción",
+
+  "takeTour": "Hacer un Recorrido",
+
+  "welcomeToVesti":
+      "¡Hola, bienvenido a Vesti! Selecciona la sección sobre la que te gustaría aprender más y te mostraremos paso a paso",
+
+  "powerfulWallets": "Carteras poderosas",
+
+  "pathwaysToMoveAbroad": "Vías para mudarse al extranjero",
+
+  "cardsThatWorkEverywhere": "Tarjetas que funcionan en todas partes",
+
+  "affordableFlights": "Vuelos asequibles",
+
+  "findMyWayAroundThanks": "Puedo encontrar mi camino, gracias",
+
+  "selectWalletFeatureToLearn":
+      "Selecciona la función de la cartera sobre la que deseas aprender",
+
+  "allFeatures": "Todas las funciones",
+
+  "allMoney": "Todo el dinero",
+
+  "sendMoney": "Enviar Dinero",
+
+  "addWallet": "Agregar Cartera",
+
+  "selectPathwayFeatureToLearn":
+      "Selecciona la función de la vía sobre la que deseas aprender",
+
+  "joinPathway": "Unirse a una vía",
+
+  "selectCardFeatureToLearn":
+      "Selecciona la función de la tarjeta sobre la que deseas aprender",
+
+  "fundVirtualCard": "Fondos para Tarjeta Virtual",
+
+  "makeTransaction": "Realizar Transacción",
+
+  "requestPhysicalCard": "Solicitar Tarjeta Física", //kyc verification and tour guide
+  //Book a flight modal
+   "clickBookFlightCard":
+      "Haz clic en la tarjeta 'Reservar vuelo' en la página de inicio",
+
+  "selectDestination": "Selecciona tu destino de la lista que se proporcionará",
+
+  "selectTicketType": "Procede a seleccionar el tipo de billete (ida/vuelta)",
+
+  "selectTakeOffAndDestination": "Selecciona tu lugar de salida y destino",
+
+  "selectDepartureDate":
+      "Puedes seleccionar tu fecha de salida y buscar tu vuelo",
+
+  "selectFlightAndPay": "Selecciona tu vuelo y procede a realizar el pago",
+
+  "ticketDisplayAfterPayment":
+      "Una vez que hayas realizado el pago con éxito, tu billete se mostrará en la pantalla", //Book a flight modal
 };

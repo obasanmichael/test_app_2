@@ -11,7 +11,7 @@ class ApiCall {
   ApiCall._internal([String? authToken = '']) {
     token = authToken;
     String t =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmM1MjBkLTQxMjktNDAzYi1iZDQ3LThlYTg4YmMyM2MyZiIsImVtYWlsIjoidGlib3ZhNTg3MkBldmltem8uY29tIiwiZmlyc3ROYW1lIjoiRWJlbmV6ZXIiLCJsYXN0TmFtZSI6Ikh1bnN1IiwiaWF0IjoxNzIzNjI1OTc4LCJleHAiOjE3MjM2Mjc3Nzh9.wwIFR5PydRxZy-bHvXezAHiqD6U9ILcnH4bBeh6TIbs";
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmNmM1MjBkLTQxMjktNDAzYi1iZDQ3LThlYTg4YmMyM2MyZiIsImVtYWlsIjoidGlib3ZhNTg3MkBldmltem8uY29tIiwiZmlyc3ROYW1lIjoiRWJlbmV6ZXIiLCJsYXN0TmFtZSI6Ikh1bnN1IiwiaWF0IjoxNzIzNjUyNjI0LCJleHAiOjE3MjM2NTQ0MjR9.wptZ462SzBLKOJ7AY_gqTnMYkHVbVL4C5bwP6-tlkBE";
     _dio = Dio();
     String _baseUrl =
         "http://syca-app-backend.eba-pe3mzmfm.us-east-1.elasticbeanstalk.com/api/v1";

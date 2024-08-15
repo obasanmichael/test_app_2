@@ -450,4 +450,208 @@ Map<String, String> englishText = {
   "enterZipCode": "Enter your zip code",
 
   "amountToFundUSD": "Amount to Fund (USD)", //Vesti Cards
+  //menu Bar
+  "viewProfile": "View Profile",
+
+  "creditHistory": "Credit History",
+
+  "pathways": "Pathways",
+
+  "growthCommunities": "Growth Communities",
+
+  "settings": "Settings",
+
+  "howToUseApp": "How to use the App",
+
+  "country": "Country",
+
+  "exchangeRate": "Exchange Rate",
+
+  "termsAndPrivacy": "Terms and Privacy",
+
+  "disclosures": "Disclosures",
+
+  "helpCenter": "Help Center",
+
+  "logOut": "Log out", //menu bar
+  //credit History
+  "importCreditHistory": "Import Credit History",
+
+  "startVestiCreditCardApplication":
+      "Start the application for a Vesti Credit Card by importing your foreign credit history",
+
+  "noCreditHistoryImported": "No credit history imported",
+
+  "importNigerianCreditHistory":
+      "Import your Nigerian credit history to start your application for the Vesti Credit Card",
+
+  "importCreditHistoryAgain": "Import Credit History", //credit History
+  //settings
+  "myVestiUsername": "My Vesti Username",
+
+  "providusAccount": "Providus Account",
+
+  "address": "Address",
+
+  "updatePassword": "Update Password",
+
+  "updateTransactionPin": "Update Transaction Pin",
+
+  "editProfile": "Edit Profile",
+
+  "currency": "Currency",
+
+  "deviceSecurity": "Device Security",
+
+  "alwaysHideBalance": "Always Hide Balance",
+
+  "securityLock": "Security Lock",
+
+  "twoFactorAuthentication": "2 Factor Authentication",
+
+  "createNewPassword": "Create New Password",
+
+  "followGuidelinesForPassword":
+      "Follow our guidelines to create a secure password",
+
+  "currentPassword": "Current Password",
+
+  "newPassword": "New Password",
+
+  "confirmNewPassword": "Confirm new password",
+
+  "saveNewPassword": "Save New Password",
+
+  "createNewPin": "Create New Pin",
+
+  "followGuidelinesForPin":
+      "Follow our guidelines to create a secure transaction pin",
+
+  "newPin": "New Pin",
+
+  "confirmNewPin": "Confirm new pin",
+
+  "saveNewPin": "Save New Pin",
+
+  "updateProfile": "Update Profile",
+
+  "edit": "Edit",
+
+  "phone": "Phone",
+
+  "city": "City",
+
+  "state": "State",
+
+  "bankVerificationNumber": "Bank Verification Number",
+
+  "username": "Username", //settings
+  //profile
+   "account": "Account",
+
+  "walletBalance": "Wallet Balance",
+
+  "providusAccountNumber": "Providus Account Number",
+
+  "tapCardToCopyAccountNumber": "Tap this card to copy your account number",
+
+  "membership": "Membership",
+
+  "clickToSeeAvailablePlans":
+      "Click to see our available plans that suit your interest",
+
+  "kycIdentityDocuments": "KYC(Identity Documents)",
+
+  "uploadOrCheckKYCStatus": "Upload or check the status of your KYC",
+
+  "securitySettings": "Security",
+
+  "updatePasswordAndEnable2FA":
+      "You can update your password and as well provide 2FA to your account",
+
+  "inviteYourFriends": "Invite your friends",
+
+  "totalInvitesMade":
+      "You have made a total of __ invites, tap to share link to invite friends",
+
+  "contactSupportTeam":
+      "You can contact our support team for issues and we will respond quickly",
+
+  "tourGuide": "Tour Guide",
+
+  "takeTourAndExploreApp":
+      "Click to take a tour and explore to learn more about the Vesti App",
+
+  "requestAccountDeletion": "Request Account Deletion",
+
+  "requestToDeleteAccount": "You can request to delete your account here", //profile
+  //kyc verification and tour guide
+  "kycVerification": "KYC Verification",
+
+  "selectPreferredIdentificationMethod":
+      "To Verify your identity, select your preferred means of identification",
+
+  "accountPassword": "Account Password",
+
+  "updateLoginPassword": "Update your login password",
+
+  "transactionPin": "Transaction Pin",
+
+  "takeTour": "Take a Tour",
+
+  "welcomeToVesti":
+      "Hello there, Welcome to Vesti! Select the section you would like to learn more about and we will show you step by step",
+
+  "powerfulWallets": "Wallets that are powerful",
+
+  "pathwaysToMoveAbroad": "Pathways to move abroad",
+
+  "cardsThatWorkEverywhere": "Card that work everywhere",
+
+  "affordableFlights": "Flights that are affordable",
+
+  "findMyWayAroundThanks": "I can find my way around, thanks",
+
+  "selectWalletFeatureToLearn":
+      "Select the wallet feature you want to learn about",
+
+  "allFeatures": "All features",
+
+  "allMoney": "All money",
+
+  "sendMoney": "Send Money",
+
+  "addWallet": "Add Wallet",
+
+  "selectPathwayFeatureToLearn":
+      "Select the pathway feature you want to learn about",
+
+  "joinPathway": "Join a pathway",
+
+  "selectCardFeatureToLearn": "Select the card feature you want to learn about",
+
+  "fundVirtualCard": "Fund Virtual card",
+
+  "makeTransaction": "Make transaction",
+
+  "requestPhysicalCard": "Request Physical Card", //kyc verification and tour guide
+  //Book a flight modal
+  "clickBookFlightCard": "Click on the 'Book flight' card on the home page",
+
+  "selectDestination":
+      "Select your destination from the list that will be provided",
+
+  "selectTicketType": "Go ahead to select ticket type (Return/one way)",
+
+  "selectTakeOffAndDestination":
+      "Select your take off location and destination",
+
+  "selectDepartureDate":
+      "You can select your departure date and search for your flight",
+
+  "selectFlightAndPay":
+      "Select your choice of flight and proceed to make payment",
+
+  "ticketDisplayAfterPayment":
+      "Once you have successfully made payment, your ticket will be displayed on the screen", //Book a flight modal
 };
